@@ -25,7 +25,7 @@ const Users = () => {
     return (
         <div className="users">
             {/* <h1>Users DB</h1> */}
-            <p className="users-text">USERS</p>
+            <h3 className="users-text">USERS</h3>
             <div className="users-container">
                 {users.map(item => (
                     <User key={item.id} user={item} />

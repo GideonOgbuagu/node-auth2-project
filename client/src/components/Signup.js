@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-// import { axiosWithAuth } from "../utils/axiosWithAuth"
-import axios from "axios"
+import { axiosWithAuth } from "../utils/axiosWithAuth"
 
 
 const Signup = (props) => {
@@ -21,11 +20,11 @@ const handleChange = e => {
 
 const handleSubmit = e => {
     e.preventDefault();
-    axios
-        .post("http://localhost:5200/api/auth/register", signup)
+    axiosWithAuth()
+        .post("/api/auth/register", signup)
         .then(res => {
-           console.log(res)
-            localStorage.setItem('token', res.payload)
+        //    console.log(res.data)
+            // localStorage.setItem('token', res.data.token)
             props.history.push('/login');
            
         })

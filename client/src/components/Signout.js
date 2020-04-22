@@ -11,8 +11,9 @@ const Signout = () => {
     }, []);
 
     return (
-        <div>
-            <p>Thank you for visiting</p>
+        <div className="signout">
+
+            <h1>Thank you for visiting</h1>
             <p>You have been successfully Logged out!</p>
             
         </div>

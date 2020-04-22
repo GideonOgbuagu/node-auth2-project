@@ -5,6 +5,7 @@ import Users from './components/Users';
 import Signup from './components/Signup';
 import Signin from './components/Signin';
 import Signout from './components/Signout';
+import PrivateRoute from './components/PrivateRoute'
 
 function App() {
     return (
@@ -28,7 +29,7 @@ function App() {
             </header>
   
             <Switch>
-              <Route exact path="/users" component={Users}/>
+              <PrivateRoute exact path="/users" component={Users}/>
               <Route path="/register" component={Signup}/>
               <Route path="/login" component={Signin}/>
               <Route path="/signout" component={Signout}/>
