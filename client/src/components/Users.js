@@ -24,7 +24,8 @@ const Users = () => {
     //console.log(data)
     return (
         <div className="users">
-            <h1>Users</h1>
+            {/* <h1>Users DB</h1> */}
+            <p className="users-text">USERS</p>
             <div className="users-container">
                 {users.map(item => (
                     <User key={item.id} user={item} />

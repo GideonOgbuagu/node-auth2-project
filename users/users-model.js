@@ -8,7 +8,7 @@ module.exports = {
 }
 
 function find() {
-   return db('users').select("id", "username", "password")
+   return db('users').select("id", "username", "password", "department")
 }
 function findBy(entry) {
     return db('users').where(entry)

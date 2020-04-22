@@ -19,7 +19,11 @@ router.post('/register', (req, res) => {
 
     Users.add(user)
          .then(stored => {
-             res.status(201).json(stored)
+             res.status(201).json({
+                id: stored.id,
+                username: stored.username,
+                department: stored.department
+             })
          })
          .catch(err => {
              console.log(err);

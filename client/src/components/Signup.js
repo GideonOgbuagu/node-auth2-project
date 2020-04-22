@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { axiosWithAuth } from "../utils/axiosWithAuth"
+// import { axiosWithAuth } from "../utils/axiosWithAuth"
+import axios from "axios"
 
 
 const Signup = (props) => {
@@ -20,8 +21,8 @@ const handleChange = e => {
 
 const handleSubmit = e => {
     e.preventDefault();
-    axiosWithAuth()
-        .post("/api/auth/register", signup)
+    axios
+        .post("http://localhost:5200/api/auth/register", signup)
         .then(res => {
            console.log(res)
             localStorage.setItem('token', res.payload)
