@@ -38,7 +38,9 @@ router.post('/login', (req, res) => {
          .then(([user]) => {
              //if we find the user, then also  check that the password match
              if (user && bcrypt.compareSync(password, user.password)) {
+
               const token = generateToken(user);  
+
                 res.status(201).json({ message: `Welcome, ${user.username}`, token })
              } else {
                  res.status(401).json({ message: "You are cannot pass! "})
@@ -54,8 +56,7 @@ function generateToken(user) {
     // the data
     const payload = {
         userId: user.id,
-        username: user.username,
-        department: user.department
+        
     };
     const secret = secrets.jwtSecret;
     const options = {
