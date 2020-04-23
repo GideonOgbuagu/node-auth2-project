@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
 import Users from './components/Users';
 import Signup from './components/Signup';
 import Signin from './components/Signin';
@@ -14,16 +14,16 @@ function App() {
             <header className="App-header">
               <ul>
                 <li>
-                  <Link to="/register">Sign Up</Link>
+                  <NavLink to="/register">Sign Up</NavLink>
                 </li>
                 <li>
-                  <Link to="/login">Sign In</Link>
+                  <NavLink to="/login">Sign In</NavLink>
                 </li>
                 <li>
-                  <Link to="/users">Users</Link>
+                  <NavLink to="/users">Users</NavLink>
                 </li>
                 <li>
-                  <Link to="/signout">Sign Out</Link>
+                  <NavLink to="/signout">Sign Out</NavLink>
                 </li>
               </ul>
             </header>
