@@ -14,7 +14,7 @@ const Signout = () => {
         <div className="signout">
 
             <h1>Thank you for visiting</h1>
-            <p>You have been successfully Logged out!</p>
+            <p className="signout-text">You have been successfully Logged out!</p>
             
         </div>
     )

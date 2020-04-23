@@ -3,8 +3,8 @@ import React from 'react'
 const User = (props) => {
     return (
         <div className="user">
-            <p>{props.user.username}</p>
-            <p>{props.user.department}</p>
+            <h2 className="user-header">{props.user.username}</h2>
+            <p className="user-department">{props.user.department}</p>
         </div>
     )
 }
