@@ -23,8 +23,8 @@ const handleSubmit = e => {
     axiosWithAuth()
         .post("/api/auth/register", signup)
         .then(res => {
-           console.log(res)
-            localStorage.setItem('token', res.payload)
+        //    console.log(res.data)
+            // localStorage.setItem('token', res.data.token)
             props.history.push('/login');
            
         })
